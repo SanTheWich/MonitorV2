@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>İSTASYONLAR | ROBOS</title>
-
+    <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="Robos.ico"/>
     <!-- font-awesome-CDN-linki -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
@@ -229,6 +229,102 @@
         <div class="page-body">
           <div class="container-xl">
             <!-- Content here -->
+            <div class="card m-4 border-0 shadow">
+            <div class="card-header">Table On The Road</div>
+        <div class="card-body">
+            <table id="myTable">
+                
+                <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Ürün</th>
+                    <th>Açıklama</th>
+                    <th>Fiyat</th>
+                    <th>Sil | Düzenle</th>
+                </tr>
+                </thead>
+                <tbody id="table-body">
+                <tr role="row">
+                    <td>Yasin</td>
+                    <td>Karabudak</td>
+                    <td>AMR</td>
+                    <td>Lidar</td>
+                    <td>395$</td>
+                    <td><button onclick="deleteTable($tableAd)" type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button><button type="button" class="ms-2 btn btn-dark"><i class="fa-solid fa-pen"></i></button></td>
+                </tr>
+                <tr role="row">
+                    <td>S</td>
+                    <td>D</td>
+                    <td>AGV</td>
+                    <td>S</td>
+                    <td>$</td>
+                    <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button><button type="button" class="ms-2 btn btn-dark"><i class="fa-solid fa-pen"></i></button></td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>    
+    </div>
+  </div>
+    <div class="d-flex justify-content-center">
+    <button id="duzenle" type="button" 
+                class="btn btn-lg btn-dark border-0 mt-0 mb-5"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal">
+                <i class="fa-solid fa-pen-to-square"></i>Düzenle
+            </button>
+            <div class="modal" id="myModal" data-bs-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <h4 class="modal-title text-light">Düzenle</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="dropdown">
+                                <button id="odeme" class="btn btn-lg ms-4 btn-dark col-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Örnek <i class="fa-solid fa-angles-down"></i></i>
+                                    <i class="fa-solid fa-list-dropdown"></i>
+                                </button>
+                                    <ul class="dropdown-menu dropdown-menu-dark"    aria-labelledby="dropdownMenuButton1">
+                                      <li><a href=""></a></li>
+                                      <li><i class="fa-solid fa-cash-register"></i></li>
+                                    </ul>
+                                <button class="btn btn-lg ms-4 btn-secondary col-5 dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="true">
+                                    Button
+                                    <i class="fa-solid fa-list-dropdown"></i>
+                                </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                      <li><i class="fa-brands fa-bitcoin"></i></li>
+                                      <li><i class="fa-brands fa-ethereum"></i></li>
+                                    </ul>
+                            <div class="mt-5">            
+                                <input id="ad" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="text" placeholder="Ad" aria-label="default input example">
+                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="text" placeholder="Soyad" aria-label="default input example">
+                                <!-- <input id="sehir" autocomplete="off" class="form-control mb-2 text-light" type="text" placeholder="Şehir" aria-label="default input example"> -->
+                                <div class="input-group mb-2" >
+                                    <select class="form-select border-secondary text-secondary" id="urun" >
+                                      <option selected>Seç...</option>
+                                      <option class="text-light" value="AGV">AGV</option>
+                                      <option class="text-light" value="AMR">AMR</option>
+                                      <option class="text-light" value="Forklift AGV">Forklift AGV</option>
+                                    </select>
+                                  </div>
+                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="text" placeholder="Açıklama" aria-label="default input example">
+                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="number" placeholder="Fiyat" aria-label="default input example">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-secondary">
+                            <button class="btn btn-lg btn-danger border-0" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Kapat</button>
+                            <button onclick="veriEkle('ad','soyad','ankara','asdjhagfhjagfh', '$10')"
+                            type="button" id="save" class="btn btn-lg btn-primary" data-bs-dismiss="modal"><i class="fa-solid fa-floppy-disk"></i> Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
           </div>
         </div>
         <footer class="footer footer-transparent align-bottom d-print-none">
@@ -265,5 +361,140 @@
     <script src="./dist/js/tabler.min.js"></script>
     <script src="./dist/js/demo.min.js"></script>
     <script src="https://kit.fontawesome.com/33be9d2c71.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      var tablo = "";
+      $(document).ready(function() {
+          tablo = $('#myTable').DataTable({
+              
+              rowReorder: {
+                  selector: 'td:nth-child(2)'
+              },
+              responsive: true,
+              language:{
+                  info:"Toplam _TOTAL_ sonuç arasından _END_ sonuç gösteriliyor",
+                  lengthMenu:"Her sayfada _MENU_ sonuç göster ",
+                  search: "Arama: ",
+                  paginate: {
+                          first: "İlk",
+                          previous: "Önceki",
+                          next: "Sonraki",
+                          last: "Son",
+                      },
+                  }
+          });
+          
+      } );    
+      var editor;
+      $('#myTable').on( 'click', 'tbody tr', function (e) {
+          e.preventDefault();
+          editor.delete( $(this).closest('tr'), {
+                  title: 'Delete record',
+                  message: 'Are you sure you wish to remove this record?',
+                  buttons: 'Delete'
+              } );
+          console.log("selam");
+      } );
+      // $('#myTable').DataTable( {
+      //         ajax: "../php/staff.php",
+      //         columns: [
+      //             { data: null, render: function ( data, type, row ) {
+      //                 // Combine the first and last names into a single table field
+      //                 return data.first_name+' '+data.last_name;
+      //             } },
+      //             { data: "position" },
+      //             { data: "office" },
+      //             { data: "extn" },
+      //             { data: "start_date" },
+      //             { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) },
+      //             {
+      //                 data: null,
+      //                 className: "dt-center editor-edit",
+      //                 defaultContent: '<i class="fa fa-pencil"/>',
+      //                 orderable: false
+      //             },
+      //             {
+      //                 data: null,
+      //                 className: "dt-center editor-delete",
+      //                 defaultContent: '<i class="fa fa-trash"/>',
+      //                 orderable: false
+      //             }
+      //         ]
+      //     } );
+      
+      
+      
+      function veriEkle(ad,soyad,urun,aciklama,fiyat,sd){
+          let tableAd = document.querySelector("#ad");
+          let tableSoyad = document.querySelector("#soyad");
+          let tableUrun = document.querySelector("#urun");
+          let tableAciklama = document.querySelector("#aciklama");
+          let tableFiyat = document.querySelector("#fiyat");
+          let tableSd = `
+          <td><button onclick="deleteTable(${tableAd})" type='button' class='btn btn-danger'><i class='fa-solid fa-trash-can'></i></button><button type='button' class='ms-2 btn btn-dark'><i class='fa-solid fa-pen'></i></button></td>`;
+          // if(tableAd.value == "") {
+          //     alert("Lütfen Adınızı girin")
+          // }
+          // Input boş ise saymasını engelle örneğin; 3 sonuç arasından 3 sonuç gözüküyor
+          var veri = [
+              tableAd.value,
+              tableSoyad.value,
+              tableUrun.value,
+              tableAciklama.value,
+              tableFiyat.value + "$",
+              tableSd
+      ];
+          tablo.row.add(veri); // Add new data
+      
+          // var tableBody = $('#table-body');
+          // tableBody.html(
+          //     tableBody.html() + `
+          // <tr role="row">
+          //         <td>${tableaAd.value}</td>
+          //         <td>${tableaSoyad.value}</td>
+          //         <td>${tableaSehir.value}</td>
+          //         <td>${tableaAciklama.value}</td>
+          //         <td>${tableaFiyat.value}$</td>
+          //     </tr>
+              
+          // `
+          // );
+          tablo.draw();
+      
+          Swal.fire({
+          icon: 'success',
+          title: 'Değişiklikleriniz Kaydedildi',
+          showConfirmButton: false,
+          timer: 1700
+      })
+      }
+      
+          function deleteTable(ad) {
+              console.log(ad)
+          }
+      // document.querySelector("#save").addEventListener("click",newTable);
+      
+      
+      // function newTable(ad){
+      
+      //     let tableInput = document.querySelector("#ad");
+      
+      //     let td = `<tr role="row">
+      //             <td>${tableInput.value}</td>
+      //             <td>${soyad}</td>
+      //             <td>${sehir}</td>
+      //             <td>${aciklama}</td>
+      //             <td>${tableInput.value}</td>
+      //         </tr>
+      //         `;
+      // }
+      
+      
+      </script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
