@@ -1,0 +1,298 @@
+<!doctype html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta5
+* @link https://tabler.io
+* Copyright 2018-2022 The Tabler Authors
+* Copyright 2018-2022 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>KULLANCI AYARLARI | ROBOS</title>
+
+    <link rel="shortcut icon" type="image/png" href="Robos.ico"/>
+    <!-- font-awesome-CDN-linki -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- CSS files -->
+    <link href="./dist/css/tabler.css" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="./dist/css/demo.min.css" rel="stylesheet"/>
+  </head>
+  <body >
+    <div class="wrapper">
+      <header class="navbar navbar-expand-md navbar-light d-print-none">
+        <div class="container-xl">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href="#">
+              <img src="static/logo/monitor2logo11.png" width="110" height="32" alt="Monitor" class="navbar-brand-image">
+            </a>
+          </h1>
+          <div class="navbar-nav flex-row order-md-last">
+            <div class="nav-item dropdown d-none d-md-flex me-3">
+              <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+                <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg>
+                <span class="badge bg-red"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Sit fugit yapiente</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" id="tus" class="btn btn-danger">Bütün Bildirimleri Görüntüle</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/default-user-image.png)"></span>
+                <div class="d-none d-xl-block ps-2">
+                  <div>KULLANICI</div>
+                  <div class="mt-1 small text-muted">ROL</div>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tool me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5"></path>
+               </svg>Hesap Ayarları</a>
+                <div class="dropdown-divider"></div>
+                <!-- <a href="#" class="dropdown-item"><i class="fa-solid fa-gear me-2"></i>Ayarlar</a> -->
+                <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                  <path d="M7 12h14l-3 -3m0 6l3 -3"></path>
+               </svg>Çıkış Yap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <div class="navbar navbar-light">
+            <div class="container-xl">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                      Ana Sayfa
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="istasyonlar.html" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15"></path>
+                      <rect x="9" y="6" width="10" height="8" rx="3"></rect>
+                      <circle cx="9" cy="19" r="2"></circle>
+                      <circle cx="18" cy="19" r="2"></circle>
+                   </svg>
+                    <span class="nav-link-title">
+                      İstasyonlar
+                    </span>
+                  </a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                    <i class="fa-sharp fa-solid fa-lock me-1"></i>
+                    <span class="nav-link-title">
+                      Admin Paneli
+                    </span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" >
+                      Kullanıcılar
+                    </a>
+                    <a class="dropdown-item" href="#" >
+                      Mail Grupları
+                    </a>
+                  </div>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-check me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M3.5 5.5l1.5 1.5l2.5 -2.5"></path>
+                      <path d="M3.5 11.5l1.5 1.5l2.5 -2.5"></path>
+                      <path d="M3.5 17.5l1.5 1.5l2.5 -2.5"></path>
+                      <line x1="11" y1="6" x2="20" y2="6"></line>
+                      <line x1="11" y1="12" x2="20" y2="12"></line>
+                      <line x1="11" y1="18" x2="20" y2="18"></line>
+                   </svg>
+                    <span class="nav-link-title">
+                      Görevler
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                   </svg>
+                    <span class="nav-link-title">
+                      Ayarlar
+                    </span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-menu-columns">
+                      <div class="dropdown-menu-column">
+                        <a class="dropdown-item" href="#" ><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-package me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+                          <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                          <line x1="12" y1="12" x2="12" y2="21"></line>
+                          <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                          <line x1="16" y1="5.25" x2="8" y2="9.75"></line>
+                       </svg>
+                          Ürün - İstasyon Eşleşmeleri
+                        </a>
+                      <div class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-fingerprint me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M18.9 7a8 8 0 0 1 1.1 5v1a6 6 0 0 0 .8 3"></path>
+                            <path d="M8 11a4 4 0 0 1 8 0v1a10 10 0 0 0 2 6"></path>
+                            <path d="M12 11v2a14 14 0 0 0 2.5 8"></path>
+                            <path d="M8 15a18 18 0 0 0 1.8 6"></path>
+                            <path d="M4.9 19a22 22 0 0 1 -.9 -7v-1a8 8 0 0 1 12 -6.95"></path>
+                         </svg>Admin Paneli
+                        </a>
+                        <div class="dropdown-menu">
+                          <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                         </svg>Kullanıcılar</a>
+                          <a href="#" class="dropdown-item"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <polyline points="3 7 12 13 21 7"></polyline>
+                         </svg>
+                            Mail Grupları</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+                
+              </ul>
+              <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                <form action="." method="get">
+                  <div class="input-icon">
+                    <span class="input-icon-addon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Ara…" aria-label="Search in website">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-wrapper">
+        <div class="container-xl">
+          <!-- Page title -->
+          <div class="page-header d-print-none">
+            <div class="row align-items-center">
+              <div class="col">
+                <h2 class="page-title">
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <!-- Content here -->
+            <div class="card shadow">
+              <div class="card-body">
+                <h1 class="card-title">Şifre Değiştir</h1>
+                <label for="inputPassword5" class="form-label">Mevcut Şifre</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Şifre">
+              <div id="passwordHelpBlock" class="form-text mb-3">
+              </div>
+              <label for="inputPassword5" class="form-label">Yeni Şifre</label>
+              <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Yeni Şifre">
+            <div id="passwordHelpBlock" class="form-text mb-3">
+            </div>
+            <label for="inputPassword5" class="form-label">Yeni Şifre (Tekrar)</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Yeni Şifre (Tekrar)">
+          <div id="passwordHelpBlock" class="form-text mb-3">
+          </div>
+
+          <div class="deneme ms-0 text-center" id="button-3">
+            <div id="circle"></div>
+            <a id="a" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"></path>
+              <circle cx="12" cy="14" r="2"></circle>
+              <polyline points="14 4 14 8 8 8 8 4"></polyline>
+           </svg>Kaydet</a>
+          </div>
+        
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+        <footer class="footer footer-transparent align-bottom d-print-none">
+          <div class="container-xl">
+            <div class="text-center align-items-center">
+              <!-- <div class="col-lg-auto ms-lg-auto">
+                <ul class="list-inline list-inline-dots mb-0">
+                  <li class="list-inline-item"><a href="./docs/index.html" class="link-secondary">Documentation</a></li>
+                  <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
+                  <li class="list-inline-item"><a href="https://github.com/tabler/tabler" target="_blank" class="link-secondary" rel="noopener">Source code</a></li>
+                </ul>
+              </div> -->
+              <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
+                <ul class="list-inline list-inline-dots mb-0">
+                  <li class="list-inline-item">
+                    Copyright &copy; 2022
+                    <a href="http://robos.com.tr/" class="link-secondary">ROBOS</a>.
+                    Bütün Hakları Saklıdır.
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-secondary" rel="noopener">
+                      v2.0.0-alpha1
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- Libs JS -->
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js"></script>
+    <script src="./dist/js/demo.min.js"></script>
+    <script src="https://kit.fontawesome.com/33be9d2c71.js" crossorigin="anonymous"></script>
+  </body>
+</html>
