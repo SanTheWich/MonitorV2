@@ -86,14 +86,14 @@
           <div class="navbar navbar-light">
             <div class="container-xl">
               <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="#" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                       Ana Sayfa
                     </span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="#" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -230,36 +230,58 @@
           <div class="container-xl">
             <!-- Content here -->
             <div class="card m-4 border-0 shadow">
-            <div class="card-header">Table On The Road</div>
+            <div class="card-header">İstasyonlar</div>
         <div class="card-body">
             <table id="myTable">
                 
                 <thead>
                 <tr>
-                    <th>Ad</th>
-                    <th>Soyad</th>
-                    <th>Ürün</th>
-                    <th>Açıklama</th>
-                    <th>Fiyat</th>
+                    <th>ID</th>
+                    <th>Bölge Adı</th>
+                    <th>İstasyon No</th>
+                    <th>Durum</th>
+                    <th>Aktiflik</th>
                     <th>Sil | Düzenle</th>
                 </tr>
                 </thead>
                 <tbody id="table-body">
                 <tr role="row">
-                    <td>Yasin</td>
-                    <td>Karabudak</td>
-                    <td>AMR</td>
-                    <td>Lidar</td>
-                    <td>395$</td>
-                    <td><button onclick="deleteTable($tableAd)" type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button><button type="button" class="ms-2 btn btn-dark"><i class="fa-solid fa-pen"></i></button></td>
+                    <td>35</td>
+                    <td>Depo</td>
+                    <td>3A</td>
+                    <td>Şarjda</td>
+                    <td>Aktif</td>
+                    <td><button onclick="deleteTable($tableAd)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <line x1="4" y1="7" x2="20" y2="7"></line>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                      <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                      <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                   </svg></button><button type="button" class="ms-2 pe-1 btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+                   </svg></button></td>
                 </tr>
                 <tr role="row">
-                    <td>S</td>
-                    <td>D</td>
-                    <td>AGV</td>
-                    <td>S</td>
-                    <td>$</td>
-                    <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button><button type="button" class="ms-2 btn btn-dark"><i class="fa-solid fa-pen"></i></button></td>
+                    <td>355</td>
+                    <td>Motor Montaj</td>
+                    <td>5A</td>
+                    <td>Yükleniyor</td>
+                    <td>Aktif</td>
+                    <td><button type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <line x1="4" y1="7" x2="20" y2="7"></line>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                      <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                      <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                   </svg></button><button type="button" class="ms-2 pe-1 btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+                   </svg></button></td>
                 </tr>
                 
                 </tbody>
@@ -272,18 +294,23 @@
                 class="btn btn-lg btn-dark border-0 mt-0 mb-5"
                 data-bs-toggle="modal"
                 data-bs-target="#myModal">
-                <i class="fa-solid fa-pen-to-square"></i>Düzenle
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
+                  <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path>
+                  <path d="M16 5l3 3"></path>
+               </svg>Ekle
             </button>
             <div class="modal" id="myModal" data-bs-backdrop="static">
                 <div class="modal-dialog">
-                    <div class="modal-content bg-dark">
+                    <div class="modal-content bg-white">
                         <div class="modal-header border-0">
                             <h4 class="modal-title text-light">Düzenle</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <div class="dropdown">
-                                <button id="odeme" class="btn btn-lg ms-4 btn-dark col-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <!-- <button id="odeme" class="btn btn-lg ms-4 btn-dark col-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Örnek <i class="fa-solid fa-angles-down"></i></i>
                                     <i class="fa-solid fa-list-dropdown"></i>
                                 </button>
@@ -294,32 +321,46 @@
                                 <button class="btn btn-lg ms-4 btn-secondary col-5 dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="true">
                                     Button
                                     <i class="fa-solid fa-list-dropdown"></i>
-                                </button>
+                                </button> -->
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                       <li><i class="fa-brands fa-bitcoin"></i></li>
                                       <li><i class="fa-brands fa-ethereum"></i></li>
                                     </ul>
-                            <div class="mt-5">            
-                                <input id="ad" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="text" placeholder="Ad" aria-label="default input example">
-                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="text" placeholder="Soyad" aria-label="default input example">
+                            <div class="mt-1">            
+                                <input id="ad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="ID" aria-label="default input example">
+                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bölge Adı" aria-label="default input example">
                                 <!-- <input id="sehir" autocomplete="off" class="form-control mb-2 text-light" type="text" placeholder="Şehir" aria-label="default input example"> -->
-                                <div class="input-group mb-2" >
+                                
+                                <!-- seçmeli  -->
+                                <!-- <div class="input-group mb-2" >
                                     <select class="form-select border-secondary text-secondary" id="urun" >
                                       <option selected>Seç...</option>
                                       <option class="text-light" value="AGV">AGV</option>
                                       <option class="text-light" value="AMR">AMR</option>
                                       <option class="text-light" value="Forklift AGV">Forklift AGV</option>
                                     </select>
-                                  </div>
-                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="text" placeholder="Açıklama" aria-label="default input example">
-                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-light border-secondary" type="number" placeholder="Fiyat" aria-label="default input example">
+                                  </div> -->
+                                
+                                <input id="urun" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="İstasyon No" aria-label="default input example">  
+                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Durum" aria-label="default input example">
+                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Aktiflik" aria-label="default input example">
                             </div>
                             </div>
                         </div>
                         <div class="modal-footer border-secondary">
-                            <button class="btn btn-lg btn-danger border-0" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Kapat</button>
+                            <button class="btn btn-lg btn-danger border-0" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                              <path d="M10 8l4 8"></path>
+                              <path d="M10 16l4 -8"></path>
+                           </svg> Kapat</button>
                             <button onclick="veriEkle('ad','soyad','ankara','asdjhagfhjagfh', '$10')"
-                            type="button" id="save" class="btn btn-lg btn-primary" data-bs-dismiss="modal"><i class="fa-solid fa-floppy-disk"></i> Kaydet</button>
+                            type="button" id="save" class="btn btn-lg btn-primary" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"></path>
+                              <circle cx="12" cy="14" r="2"></circle>
+                              <polyline points="14 4 14 8 8 8 8 4"></polyline>
+                           </svg> Kaydet</button>
                         </div>
                     </div>
                 </div>
@@ -370,7 +411,6 @@
       var tablo = "";
       $(document).ready(function() {
           tablo = $('#myTable').DataTable({
-              
               rowReorder: {
                   selector: 'td:nth-child(2)'
               },
@@ -435,7 +475,18 @@
           let tableAciklama = document.querySelector("#aciklama");
           let tableFiyat = document.querySelector("#fiyat");
           let tableSd = `
-          <td><button onclick="deleteTable(${tableAd})" type='button' class='btn btn-danger'><i class='fa-solid fa-trash-can'></i></button><button type='button' class='ms-2 btn btn-dark'><i class='fa-solid fa-pen'></i></button></td>`;
+          <td><button onclick="deleteTable(${tableAd})" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <line x1="4" y1="7" x2="20" y2="7"></line>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                      <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+                      <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                   </svg></button><button type='button' class='ms-2 pe-1 btn btn-dark'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+   <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+</svg></button></td>`;
           // if(tableAd.value == "") {
           //     alert("Lütfen Adınızı girin")
           // }
@@ -445,7 +496,7 @@
               tableSoyad.value,
               tableUrun.value,
               tableAciklama.value,
-              tableFiyat.value + "$",
+              tableFiyat.value,
               tableSd
       ];
           tablo.row.add(veri); // Add new data
