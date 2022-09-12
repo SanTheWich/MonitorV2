@@ -12,7 +12,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>İSTASYONLAR | ROBOS</title>
+    <title>Mail Grupları | ROBOS</title>
     <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="Robos.ico"/>
     <!-- font-awesome-CDN-linki -->
@@ -93,8 +93,8 @@
                     </span>
                   </a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#" >
+                <li class="nav-item">
+                  <a class="nav-link" href="istasyonlar.html" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15"></path>
@@ -139,7 +139,7 @@
                     </span>
                   </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                   <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -184,7 +184,7 @@
                               <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
                            </svg>
                             Kullanıcılar</a>
-                          <a href="mail_gruplari.html" class="dropdown-item">
+                          <a href="#" class="dropdown-item">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <rect x="3" y="5" width="18" height="14" rx="2"></rect>
@@ -230,12 +230,10 @@
           <div class="container-xl">
             <!-- Content here -->
             <div class="card m-4 border-0 shadow">
-            <div class="card-header d-flex justify-content-between">İstasyonlar <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading me-1" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <div class="card-header d-flex justify-content-between responsive">Mail Grupları <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15"></path>
-              <rect x="9" y="6" width="10" height="8" rx="3"></rect>
-              <circle cx="9" cy="19" r="2"></circle>
-              <circle cx="18" cy="19" r="2"></circle>
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <polyline points="3 7 12 13 21 7"></polyline>
            </svg></div>
         <div class="card-body">
           <div class="table-responsive">
@@ -243,22 +241,19 @@
                 
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Bölge Adı</th>
-                    <th>İstasyon No</th>
-                    <th>Durum</th>
-                    <th>Aktiflik</th>
+                    <th>Mail</th>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Rol</th>
                     <th>Sil | Düzenle</th>
                 </tr>
                 </thead>
-                <tbody id="table-body"
-                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <tbody id="table-body">
                 <tr role="row">
-                    <td>35</td>
-                    <td>Depo</td>
-                    <td>3A</td>
-                    <td>Şarjda</td>
-                    <td>Aktif</td>
+                    <td>admin@hotmail.com</td>
+                    <td>İsmet</td>
+                    <td>Ataklı</td>
+                    <td>Yönetici</td>
                     <td><button onclick="deleteTable($tableAd)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
@@ -273,11 +268,10 @@
                    </svg></button></td>
                 </tr>
                 <tr role="row">
-                    <td>355</td>
-                    <td>Motor Montaj</td>
-                    <td>5A</td>
-                    <td>Yükleniyor</td>
-                    <td>Aktif</td>
+                    <td>user@hotmail.com</td>
+                    <td>Yasin</td>
+                    <td>Karabudak</td>
+                    <td>Kullanıcı</td>
                     <td><button type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
@@ -314,7 +308,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content bg-white">
                         <div class="modal-header border-0">
-                            <h4 class="modal-title text-light">Düzenle</h4>
+                            <h4 class="modal-title text-light">Kullanıcı Ekle</h4>
                             <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
@@ -336,8 +330,8 @@
                                       <li><i class="fa-brands fa-ethereum"></i></li>
                                     </ul>
                             <div class="mt-1">            
-                                <input id="ad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="ID" aria-label="default input example">
-                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bölge Adı" aria-label="default input example">
+                                <input id="ad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Mail" aria-label="default input example">
+                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Ad" aria-label="default input example">
                                 <!-- <input id="sehir" autocomplete="off" class="form-control mb-2 text-light" type="text" placeholder="Şehir" aria-label="default input example"> -->
                                 
                                 <!-- seçmeli  -->
@@ -350,9 +344,8 @@
                                     </select>
                                   </div> -->
                                 
-                                <input id="urun" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="İstasyon No" aria-label="default input example">  
-                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Durum" aria-label="default input example">
-                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Aktiflik" aria-label="default input example">
+                                <input id="urun" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Soyad" aria-label="default input example">  
+                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Rol" aria-label="default input example">
                             </div>
                             </div>
                         </div>
@@ -375,27 +368,6 @@
                 </div>
             </div>
         </div>
-          </div>
-        </div>
-        <!-- modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title text-light">Modal Açılsın</h4>
-                <!-- <button type="button" class="btn-sm btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-               </svg>Kapat</button>
-              </div>
-            </div>
           </div>
         </div>
         <footer class="footer footer-transparent align-bottom d-print-none">
@@ -503,7 +475,6 @@
           let tableSoyad = document.querySelector("#soyad");
           let tableUrun = document.querySelector("#urun");
           let tableAciklama = document.querySelector("#aciklama");
-          let tableFiyat = document.querySelector("#fiyat");
           let tableSd = `
           <td><button onclick="deleteTable(${tableAd})" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -526,7 +497,6 @@
               tableSoyad.value,
               tableUrun.value,
               tableAciklama.value,
-              tableFiyat.value,
               tableSd
       ];
           tablo.row.add(veri); // Add new data

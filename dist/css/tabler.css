@@ -9873,7 +9873,7 @@ body:not(.theme-dark) .hide-theme-light {
 .btn-outline-dark,
 .btn-ghost-dark {
   --tblr-btn-color: #1e293b;
-  --tblr-btn-color-interactive: #1b2535;
+  --tblr-btn-color-interactive: #30425e;
   --tblr-btn-color-text: #f8fafc; }
 
 .btn-muted,
@@ -13701,6 +13701,50 @@ Antialiasing
     background-color: rgb(150, 0, 0);
   }
   .btn-close{
-    background-color: rgba(175, 0, 0, 1);
+    background-color: rgba(150, 0, 0, 1);
     color: #fff;
-  }    
+  }
+  #istasyonSayisi{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #istasyonSayisi::placeholder {
+    color: #5A5A5A;
+  }
+  #istasyonSayisi:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #istasyonSayisi{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #istasyonSayisi::placeholder {
+    color: #5A5A5A;
+  }
+  #istasyonSayisi:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }   
+  #BarkodNumarasi{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #BarkodNumarasi::placeholder {
+    color: #5A5A5A;
+  }
+  #BarkodNumarasi:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #UrunAdi{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #UrunAdi::placeholder {
+    color: #5A5A5A;
+  }
+  #UrunAdi:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
