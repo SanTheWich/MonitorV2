@@ -13664,6 +13664,39 @@ Antialiasing
     background-color: #D8D8D8;
     border:2px red;
   }
+  #baslama{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #baslama::placeholder {
+    color: #5A5A5A;
+  }
+  #baslama:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #bitis{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #bitis::placeholder {
+    color: #5A5A5A;
+  }
+  #bitis:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #kullanici{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #kullanici::placeholder {
+    color: #5A5A5A;
+  }
+  #kullanici:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
   .modal-header{
     background-color: rgb(150, 0, 0);
   }

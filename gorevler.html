@@ -230,7 +230,7 @@
           <div class="container-xl">
             <!-- Content here -->
             <div class="card m-4 border-0 shadow">
-            <div class="card-header">İstasyonlar</div>
+            <div class="card-header">Görevler</div>
         <div class="card-body">
             <table id="myTable">
                 
@@ -241,7 +241,9 @@
                     <th>Hedef</th>
                     <th>AGV No</th>
                     <th>Oluşturma</th>
-                    <th>Oluşturma</th>
+                    <th>Başlama</th>
+                    <th>Bitiş</th>
+                    <th>Kullanıcı</th>
                     <th>Sil | Düzenle</th>
                 </tr>
                 </thead>
@@ -250,9 +252,11 @@
                     <td>35</td>
                     <td>Depo</td>
                     <td>3A</td>
-                    <td>Şarjda</td>
-                    <td>Şarjda</td>
-                    <td>Aktif</td>
+                    <td>21-B</td>
+                    <td>Otomatik</td>
+                    <td>13:27</td>
+                    <td>14:35</td>
+                    <td>User1</td>
                     <td><button onclick="deleteTable($tableAd)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
@@ -270,9 +274,11 @@
                     <td>355</td>
                     <td>Motor Montaj</td>
                     <td>5A</td>
-                    <td>Yükleniyor</td>
-                    <td>Yükleniyor</td>
-                    <td>Aktif</td>
+                    <td>7-A</td>
+                    <td>Otomatik</td>
+                    <td>11:16</td>
+                    <td>11:58</td>
+                    <td>User2</td>
                     <td><button type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
@@ -330,8 +336,8 @@
                                       <li><i class="fa-brands fa-ethereum"></i></li>
                                     </ul>
                             <div class="mt-1">            
-                                <input id="ad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="ID" aria-label="default input example">
-                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bölge Adı" aria-label="default input example">
+                                <input id="ad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Görev ID" aria-label="default input example">
+                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Kaynak" aria-label="default input example">
                                 <!-- <input id="sehir" autocomplete="off" class="form-control mb-2 text-light" type="text" placeholder="Şehir" aria-label="default input example"> -->
                                 
                                 <!-- seçmeli  -->
@@ -344,9 +350,12 @@
                                     </select>
                                   </div> -->
                                 
-                                <input id="urun" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="İstasyon No" aria-label="default input example">  
-                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Durum" aria-label="default input example">
-                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Aktiflik" aria-label="default input example">
+                                <input id="urun" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Hedef" aria-label="default input example">  
+                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="AGV No" aria-label="default input example">
+                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Oluşturma" aria-label="default input example">
+                                <input id="baslama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Başlama" aria-label="default input example">
+                                <input id="bitis" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bitiş" aria-label="default input example">
+                                <input id="kullanici" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Kullanıcı" aria-label="default input example">
                             </div>
                             </div>
                         </div>
@@ -357,7 +366,7 @@
                               <path d="M10 8l4 8"></path>
                               <path d="M10 16l4 -8"></path>
                            </svg> Kapat</button>
-                            <button onclick="veriEkle('ad','soyad','ankara','asdjhagfhjagfh', '$10')"
+                            <button onclick="veriEkle('ad','soyad','ankara','asdjhagfhjagfh', '$10', 'as', 'dsa', 'sad')"
                             type="button" id="save" class="btn btn-lg btn-primary" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"></path>
@@ -477,6 +486,9 @@
           let tableUrun = document.querySelector("#urun");
           let tableAciklama = document.querySelector("#aciklama");
           let tableFiyat = document.querySelector("#fiyat");
+          let tableBaslama = document.querySelector("#baslama");
+          let tableBitis = document.querySelector("#bitis");
+          let tableKullanici = document.querySelector("#kullanici");
           let tableSd = `
           <td><button onclick="deleteTable(${tableAd})" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -500,6 +512,9 @@
               tableUrun.value,
               tableAciklama.value,
               tableFiyat.value,
+              tableBaslama.value,
+              tableBitis.value,
+              tableKullanici.value,
               tableSd
       ];
           tablo.row.add(veri); // Add new data
