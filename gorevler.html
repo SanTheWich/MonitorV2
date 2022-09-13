@@ -87,7 +87,7 @@
             <div class="container-xl">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#" >
+                  <a class="nav-link" href="ana_sayfa.html" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                       Ana Sayfa
                     </span>
@@ -266,7 +266,7 @@
                     <td>13:27</td>
                     <td>14:35</td>
                     <td>User1</td>
-                    <td><button onclick="deleteTable($tableAd)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <td><button type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
                       <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -488,7 +488,7 @@
       //         ]
       //     } );
       
-      
+
       
       function veriEkle(ad,soyad,urun,aciklama,fiyat,sd){
           let tableAd = document.querySelector("#ad");
@@ -546,15 +546,16 @@
       
           Swal.fire({
           icon: 'success',
+          // iconColor: '#970000',
           title: 'Değişiklikleriniz Kaydedildi',
           showConfirmButton: false,
           timer: 1700
       })
       }
       
-          function deleteTable(ad) {
-              console.log(ad)
-          }
+          // function deleteTable(ad) {
+          //     console.log(ad)
+          // }
       // document.querySelector("#save").addEventListener("click",newTable);
       
       

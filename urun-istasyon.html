@@ -87,7 +87,7 @@
             <div class="container-xl">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#" >
+                  <a class="nav-link" href="ana_sayfa.html" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
                       Ana Sayfa
                     </span>
@@ -247,12 +247,12 @@
                     <th>Sil | Düzenle</th>
                 </tr>
                 </thead>
-                <tbody id="table-body" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <tbody id="table-body">
                 <tr role="row" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <td>358E</td>
                     <td>AMR</td>
                     <td>19</td>
-                    <td><button onclick="deleteTable($tableAd)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <td><button onclick="deleteItem(this)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
                       <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -269,7 +269,7 @@
                     <td>145A</td>
                     <td>AGV</td>
                     <td>7</td>
-                    <td><button type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <td><button onclick="deleteItem(this)" type="button" class="btn pe-1 btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
                       <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -496,7 +496,7 @@
           let tableUrunAdi = document.querySelector("#UrunAdi");
           let tableistasyonSayisi = document.querySelector("#istasyonSayisi");
           let tableSd = `
-          <td><button onclick="deleteTable(${tableBarkodNumarasi})" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <td><button onclick="deleteItem(this)" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
                       <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -524,7 +524,7 @@
           // tableBody.html(
           //     tableBody.html() + `
           // <tr role="row">
-          //         <td>${tableaAd.value}</td>
+          //         <td  data-bs-toggle="modal" data-bs-target="#exampleModal">${tableaAd.value}</td>
           //         <td>${tableaSoyad.value}</td>
           //         <td>${tableaSehir.value}</td>
           //         <td>${tableaAciklama.value}</td>
@@ -543,9 +543,11 @@
       })
       }
       
-          function deleteTable(BarkodNumarasi) {
-              console.log(BarkodNumarasi)
-          }
+       
+      function deleteItem(e){
+  console.log("Button element", e)
+  e.parentElement.parentElement.remove()
+}
       // document.querySelector("#save").addEventListener("click",newTable);
       
       
