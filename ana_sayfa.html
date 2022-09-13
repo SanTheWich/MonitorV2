@@ -252,8 +252,7 @@
                     <th>Sil | Düzenle</th>
                 </tr>
                 </thead>
-                <tbody id="table-body"
-                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <tbody id="table-body">
                 <tr role="row">
                     <td>35</td>
                     <td>Depo</td>
@@ -282,7 +281,7 @@
   
     <div class="d-flex justify-content-center">
     <button id="duzenle" type="button" 
-                class="btn btn-lg btn-dark border-0 mt-0 mb-5"
+                class="btn btn-lg btn-dark border-0 mt-0 mb-3"
                 data-bs-toggle="modal"
                 data-bs-target="#myModal">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -318,8 +317,8 @@
                                       <li><i class="fa-brands fa-ethereum"></i></li>
                                     </ul>
                             <div class="mt-1">            
-                                <input id="ad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="ID" aria-label="default input example">
-                                <input id="soyad" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bulunduğu Bölge" aria-label="default input example">
+                                <input id="ID" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="ID" aria-label="default input example">
+                                <input id="bolge" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bulunduğu Bölge" aria-label="default input example">
                                 <!-- <input id="sehir" autocomplete="off" class="form-control mb-2 text-light" type="text" placeholder="Şehir" aria-label="default input example"> -->
                                 
                                 <!-- seçmeli  -->
@@ -332,9 +331,9 @@
                                     </select>
                                   </div> -->
                                 
-                                <input id="urun" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Akü Doluluk Oranı" aria-label="default input example">  
-                                <input id="aciklama" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Durum" aria-label="default input example">
-                                <input id="fiyat" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Aktiflik" aria-label="default input example">
+                                <input id="aku" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Akü Doluluk Oranı" aria-label="default input example">  
+                                <input id="durum" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Durum" aria-label="default input example">
+                                <input id="aktiflik" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Aktiflik" aria-label="default input example">
                             </div>
                             </div>
                         </div>
@@ -345,7 +344,7 @@
                               <path d="M10 8l4 8"></path>
                               <path d="M10 16l4 -8"></path>
                            </svg> Kapat</button>
-                            <button onclick="veriEkle('ad','soyad','ankara','asdjhagfhjagfh', '$10')"
+                            <button onclick="veriEkle('ID','bolge','ankara','asdjhagfhjagfh', '$10')"
                             type="button" id="save" class="btn btn-lg btn-dark" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"></path>
@@ -683,14 +682,14 @@
       
       
       
-      function veriEkle(ad,soyad,urun,aciklama,fiyat,sd){
-          let tableAd = document.querySelector("#ad");
-          let tableSoyad = document.querySelector("#soyad");
-          let tableUrun = document.querySelector("#urun");
-          let tableAciklama = document.querySelector("#aciklama");
-          let tableFiyat = document.querySelector("#fiyat");
+      function veriEkle(id,bolge,aku,durum,aktiflik,sd){
+          let tableID = document.querySelector("#ID");
+          let tableBolge = document.querySelector("#bolge");
+          let tableAku = document.querySelector("#aku");
+          let tableDurum = document.querySelector("#durum");
+          let tableAktiflik = document.querySelector("#aktiflik");
           let tableSd = `
-          <td><button onclick="deleteTable(${tableAd})" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <td><button" type='button' class='btn pe-1 btn-danger'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <line x1="4" y1="7" x2="20" y2="7"></line>
                       <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -707,11 +706,11 @@
           // }
           // Input boş ise saymasını engelle örneğin; 3 sonuç arasından 3 sonuç gözüküyor
           var veri = [
-              tableAd.value,
-              tableSoyad.value,
-              tableUrun.value,
-              tableAciklama.value,
-              tableFiyat.value,
+              tableID.value,
+              tableBolge.value,
+              tableAku.value,
+              tableDurum.value,
+              tableAktiflik.value,
               tableSd
       ];
           tablo.row.add(veri); // Add new data

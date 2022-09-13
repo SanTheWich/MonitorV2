@@ -13748,3 +13748,69 @@ Antialiasing
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
     border-color: #a30000;
   }
+  #ID{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #ID::placeholder {
+    color: #5A5A5A;
+  }
+  #ID:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #bolge{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #bolge::placeholder {
+    color: #5A5A5A;
+  }
+  #bolge:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #aku{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #aku::placeholder {
+    color: #5A5A5A;
+  }
+  #aku:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #durum{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #durum::placeholder {
+    color: #5A5A5A;
+  }
+  #durum:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #aktiflik{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #aktiflik::placeholder {
+    color: #5A5A5A;
+  }
+  #aktiflik:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #istasyonNo{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #istasyonNo::placeholder {
+    color: #5A5A5A;
+  }
+  #istasyonNo:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
