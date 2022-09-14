@@ -13814,3 +13814,25 @@ Antialiasing
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
     border-color: #a30000;
   }
+  #gorevId{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #gorevId::placeholder {
+    color: #5A5A5A;
+  }
+  #gorevId:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
+  #input_grup > input{
+    background-color: #fff;
+    border: 1px solid #D8D8D8;
+  }
+  #input_grup > input::placeholder {
+    color: #5A5A5A;
+  }
+  #input_grup > input:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.3);
+    border-color: #a30000;
+  }
