@@ -1,12 +1,4 @@
 <!doctype html>
-<!--
-* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
-* @version 1.0.0-beta5
-* @link https://tabler.io
-* Copyright 2018-2022 The Tabler Authors
-* Copyright 2018-2022 codecalm.net Paweł Kuna
-* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
--->
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -47,7 +39,7 @@
                 <div class="card">
                   <div class="card-body">
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Sit fugit yapiente</li>
+                      <li class="list-group-item">Sofiente fugit yapid</li>
                     </ul>
                   </div>
                   <div class="card-footer">
@@ -328,23 +320,6 @@
                             <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="dropdown">
-                                <!-- <button id="odeme" class="btn btn-lg ms-4 btn-dark col-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Örnek <i class="fa-solid fa-angles-down"></i></i>
-                                    <i class="fa-solid fa-list-dropdown"></i>
-                                </button>
-                                    <ul class="dropdown-menu dropdown-menu-dark"    aria-labelledby="dropdownMenuButton1">
-                                      <li><a href=""></a></li>
-                                      <li><i class="fa-solid fa-cash-register"></i></li>
-                                    </ul>
-                                <button class="btn btn-lg ms-4 btn-secondary col-5 dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="true">
-                                    Button
-                                    <i class="fa-solid fa-list-dropdown"></i>
-                                </button> -->
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                      <li><i class="fa-brands fa-bitcoin"></i></li>
-                                      <li><i class="fa-brands fa-ethereum"></i></li>
-                                    </ul>
                             <div class="mt-1" id="input_grup">            
                                 <input id="gorevId" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Görev ID" aria-label="default input example">
                                 <input id="kaynak" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Kaynak" aria-label="default input example">
@@ -367,7 +342,6 @@
                                 <input id="bitis" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Bitiş" aria-label="default input example">
                                 <input id="kullanici" autocomplete="off" class="form-control mb-2 text-dark" type="text" placeholder="Kullanıcı" aria-label="default input example">
                             </div>
-                            </div>
                         </div>
                         <div class="modal-footer border-secondary d-flex justify-content-center">
                             <button class="btn btn-lg btn-danger border-0" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -376,7 +350,7 @@
                               <path d="M10 8l4 8"></path>
                               <path d="M10 16l4 -8"></path>
                            </svg> Kapat</button>
-                            <button onclick="veriEkle('gorevId','kaynak','ankara','asdjhagfhjagfh', '$10', 'as', 'dsa', 'sad')"
+                            <button onclick="veriEkle('gorevId','kaynak','ankara','random', 'random', 'as', 'dsa', 'sad')"
                             type="button" id="save" class="btn btn-lg btn-dark" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"></path>
@@ -393,13 +367,6 @@
         <footer class="footer footer-transparent align-bottom d-print-none">
           <div class="container-xl">
             <div class="text-center align-items-center">
-              <!-- <div class="col-lg-auto ms-lg-auto">
-                <ul class="list-inline list-inline-dots mb-0">
-                  <li class="list-inline-item"><a href="./docs/index.html" class="link-secondary">Documentation</a></li>
-                  <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
-                  <li class="list-inline-item"><a href="https://github.com/tabler/tabler" target="_blank" class="link-secondary" rel="noopener">Source code</a></li>
-                </ul>
-              </div> -->
               <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
                 <ul class="list-inline list-inline-dots mb-0">
                   <li class="list-inline-item">
@@ -461,35 +428,6 @@
               } );
           console.log("selam");
       } );
-      // $('#myTable').DataTable( {
-      //         ajax: "../php/staff.php",
-      //         columns: [
-      //             { data: null, render: function ( data, type, row ) {
-      //                 // Combine the first and last names into a single table field
-      //                 return data.first_name+' '+data.last_name;
-      //             } },
-      //             { data: "position" },
-      //             { data: "office" },
-      //             { data: "extn" },
-      //             { data: "start_date" },
-      //             { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) },
-      //             {
-      //                 data: null,
-      //                 className: "dt-center editor-edit",
-      //                 defaultContent: '<i class="fa fa-pencil"/>',
-      //                 orderable: false
-      //             },
-      //             {
-      //                 data: null,
-      //                 className: "dt-center editor-delete",
-      //                 defaultContent: '<i class="fa fa-trash"/>',
-      //                 orderable: false
-      //             }
-      //         ]
-      //     } );
-      
-
-      
       function veriEkle(gorevId,kaynak,hedef,agvNo,olusturma,sd){
           let tableGorevId = document.querySelector("#gorevId");
           let tableKaynak = document.querySelector("#kaynak");
@@ -512,10 +450,6 @@
    <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
    <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
 </svg></button></td>`;
-          // if(tableAd.value == "") {
-          //     alert("Lütfen Adınızı girin")
-          // }
-          // Input boş ise saymasını engelle örneğin; 3 sonuç arasından 3 sonuç gözüküyor
           var veri = [
               tableGorevId.value,
               tableKaynak.value,
@@ -527,57 +461,21 @@
               tableKullanici.value,
               tableSd
       ];
-          tablo.row.add(veri); // Add new data
-      
-          // var tableBody = $('#table-body');
-          // tableBody.html(
-          //     tableBody.html() + `
-          // <tr role="row">
-          //         <td>${tableaAd.value}</td>
-          //         <td>${tableaSoyad.value}</td>
-          //         <td>${tableaSehir.value}</td>
-          //         <td>${tableaAciklama.value}</td>
-          //         <td>${tableaFiyat.value}$</td>
-          //     </tr>
-              
-          // `
-          // );
+          tablo.row.add(veri);
           tablo.draw();
       
           Swal.fire({
           icon: 'success',
-          // iconColor: '#970000',
+          // iconColor: '#970000', (Kırmızı onay)
           title: 'Değişiklikleriniz Kaydedildi',
           showConfirmButton: false,
           timer: 1700
       })
       }
-      
       function deleteItem(e){
-  console.log("Button element", e)
-  e.parentElement.parentElement.remove()
-}
-          // function deleteTable(ad) {
-          //     console.log(ad)
-          // }
-      // document.querySelector("#save").addEventListener("click",newTable);
-      
-      
-      // function newTable(ad){
-      
-      //     let tableInput = document.querySelector("#ad");
-      
-      //     let td = `<tr role="row">
-      //             <td>${tableInput.value}</td>
-      //             <td>${soyad}</td>
-      //             <td>${sehir}</td>
-      //             <td>${aciklama}</td>
-      //             <td>${tableInput.value}</td>
-      //         </tr>
-      //         `;
-      // }
-      
-      
+        console.log("Button element", e)
+        e.parentElement.parentElement.remove()
+      }
       </script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
