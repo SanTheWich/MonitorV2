@@ -33,7 +33,7 @@
   --tblr-gray-700: #334155;
   --tblr-gray-800: #1e293b;
   --tblr-gray-900: #0f172a;
-  --tblr-primary: #bb1e10;
+  --tblr-primary: #8d0c00;
   --tblr-secondary: #626976;
   --tblr-success: #2fb344;
   --tblr-info: #4299e1;
@@ -42,7 +42,7 @@
   --tblr-light: #f8fafc;
   --tblr-dark: #1e293b;
   --tblr-muted: #626976;
-  --tblr-primary-rgb: 187, 30, 16;
+  --tblr-primary-rgb: 150, 0, 0;
   --tblr-secondary-rgb: 98, 105, 118;
   --tblr-success-rgb: 47, 179, 68;
   --tblr-info-rgb: 66, 153, 225;
@@ -149,7 +149,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 #tus{
-  background-color: rgb(187, 30, 16);
+  background-color: rgb(150, 0, 0);
   color: #fff;
 }
 #tus:hover{
@@ -13168,7 +13168,7 @@ Chart sparkline
   background: rgba(214, 51, 108, 0.1) !important; }
 
 .bg-red {
-  background: #d63939; }
+  background: #960000; }
 
 .text-red {
   color: #d63939 !important; }
