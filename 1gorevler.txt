@@ -1,0 +1,8 @@
+istasyonlar datatable örnek veri (id bölge adý istasyon no, durum, aktiflik)(function "onclick" modal açýlsýn")
+responsive(tabletden)
+----------
+Görevler (Datatable [Görevid - kaynak - hedef - AGV no - oluþturma - baþlama - bitiþ - Kullanýcý])
+----------
+Ayarlar (dropdown ürün-istasyon eþleþmeleri) (Barkod Numarasý, Ürün adý, Ýstanyon Sayýsý(onclick modal=gidebilece))
+----------
+Yönetici sayfasý (Ayarlarýn altýnda)(dropdown [1-kullanýclýar /datatable, mail-ad-soyad-rol- {onclick function olsun} ] [2-Mail Gruplarý])
